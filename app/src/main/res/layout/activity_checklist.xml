@@ -1,0 +1,925 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    tools:context=".ChecklistActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:text="Preflight Checklist"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="#DFDFDF"
+                app:cardCornerRadius="4dp"
+                app:contentPadding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textPreHeader1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="UAV Preparation"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutDetailPre1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <CheckedTextView
+                            android:id="@+id/checkInput_BodyCond"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Check body condition"
+                            android:textSize="18sp" />
+                        <CheckedTextView
+                            android:id="@+id/checkInput_PropellerCondition"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Check propeller condition"
+                            android:textSize="18sp" />
+                        <CheckedTextView
+                            android:id="@+id/checkInput_PropellerInstalled"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Propeller is installed and locked"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Check remote control battery (%)"
+                            android:textSize="18sp" />
+                        <EditText
+                            android:id="@+id/inputRemoteBattery"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginLeft="24dp"
+                            android:ems="10"
+                            android:textColor="@color/black"
+                            android:hint="in Percentage"
+                            android:textColorHint="#989898"
+                            android:inputType="number"
+                            android:minHeight="48dp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Check drone batt' capacity and condition (%)"
+                            android:textSize="18sp" />
+                        <EditText
+                            android:id="@+id/inputDroneBattery"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginLeft="24dp"
+                            android:ems="10"
+                            android:textColor="@color/black"
+                            android:hint="in Percentage"
+                            android:textColorHint="#989898"
+                            android:inputType="number"
+                            android:minHeight="48dp" />
+                        <CheckedTextView
+                            android:id="@+id/checkInput_InstallDroneBatt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Install drone battery"
+                            android:textSize="18sp" />
+                        <CheckedTextView
+                            android:id="@+id/checkInput_Remove2Gimbal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Remove 2 gimbal clamps from the camera"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="#DFDFDF"
+                app:cardCornerRadius="4dp"
+                app:contentPadding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textPreHeader2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="GCS Preparation"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutDetailPre2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Device (Display / iPAD / Tablet / Handphone) battery is sufficient (>50 %)"
+                            android:textSize="18sp" />
+                        <EditText
+                            android:id="@+id/inputDeviceBatt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginLeft="24dp"
+                            android:ems="10"
+                            android:textColor="@color/black"
+                            android:hint="in Percentage"
+                            android:textColorHint="#989898"
+                            android:inputType="number"
+                            android:minHeight="48dp" />
+                        <CheckedTextView
+                            android:id="@+id/checkInput_InstallDevice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Install device into remote control"
+                            android:textSize="18sp" />
+                        <CheckedTextView
+                            android:id="@+id/checkInput_ConnectDevice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Connect device and remote with USB cable"
+                            android:textSize="18sp" />
+                        <CheckedTextView
+                            android:id="@+id/checkInput_StraightenAntenna"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Straighten the antenna"
+                            android:textSize="18sp" />
+                        <CheckedTextView
+                            android:id="@+id/checkInput_Software"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Software is working properly"
+                            android:textSize="18sp" />
+                        <CheckedTextView
+                            android:id="@+id/checkInput_PowerOnRemote"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Power on remote control"
+                            android:textSize="18sp" />
+                        <CheckedTextView
+                            android:id="@+id/checkInput_PowerOnDrone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Power on drone"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="#DFDFDF"
+                app:cardCornerRadius="4dp"
+                app:contentPadding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textPreHeader3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Camera Preparation"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutDetailPre3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <CheckedTextView
+                            android:id="@+id/checkInput_SDcardInsert"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="SD Card inserted"
+                            android:textSize="18sp" />
+                        <CheckedTextView
+                            android:id="@+id/checkInput_CameraClean"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Camera is cleaned"
+                            android:textSize="18sp" />
+                        <CheckedTextView
+                            android:id="@+id/checkInput_CameraAdjusted"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Camera setting is adjusted"
+                            android:textSize="18sp" />
+                        <CheckedTextView
+                            android:id="@+id/checkInput_GimbalSystem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Check gimbal system works properly "
+                            android:textSize="18sp" />
+                        <CheckedTextView
+                            android:id="@+id/checkInput_CameraWork"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Check camera works properly"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="#DFDFDF"
+                app:cardCornerRadius="4dp"
+                app:contentPadding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textPreHeader4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mission Preparation"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutDetailPre4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <CheckedTextView
+                            android:id="@+id/checkInput_AOI"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Check AOI is right"
+                            android:textSize="18sp" />
+                        <CheckedTextView
+                            android:id="@+id/checkInput_HomeIndicator"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Check home location indicator"
+                            android:textSize="18sp" />
+                        <CheckedTextView
+                            android:id="@+id/checkInput_FlightMission"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Check flight mission is right"
+                            android:textSize="18sp" />
+                        <CheckedTextView
+                            android:id="@+id/checkInput_FlightParameter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Check flight parameter is right"
+                            android:textSize="18sp" />
+                        <CheckedTextView
+                            android:id="@+id/checkInput_AssessRisks"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Assess risks inside flight mission area"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Check mission duration (min)"
+                            android:textSize="18sp" />
+                        <EditText
+                            android:id="@+id/inputMissionDuration"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginLeft="24dp"
+                            android:ems="10"
+                            android:textColor="@color/black"
+                            android:hint="in Minutes"
+                            android:textColorHint="#989898"
+                            android:inputType="number"
+                            android:minHeight="48dp" />
+                        <CheckedTextView
+                            android:id="@+id/checkInput_EndMissionAct"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Check End-mission-action"
+                            android:textSize="18sp" />
+                        <CheckedTextView
+                            android:id="@+id/checkInput_UploadFlightPlan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Upload Flight Plan"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="#DFDFDF"
+                app:cardCornerRadius="4dp"
+                app:contentPadding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textPreHeader5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Final Preparation"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutDetailPre5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Li-Po battery voltage > 98 %"
+                            android:textSize="18sp" />
+                        <EditText
+                            android:id="@+id/inputLiPoBatt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginLeft="24dp"
+                            android:ems="10"
+                            android:textColor="@color/black"
+                            android:hint="in Percentage"
+                            android:textColorHint="#989898"
+                            android:inputType="number"
+                            android:minHeight="48dp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Telemetry signal >90%"
+                            android:textSize="18sp" />
+                        <EditText
+                            android:id="@+id/inputTelSignal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginLeft="24dp"
+                            android:ems="10"
+                            android:textColor="@color/black"
+                            android:hint="in Percentage"
+                            android:textColorHint="#989898"
+                            android:inputType="number"
+                            android:minHeight="48dp" />
+                        <CheckedTextView
+                            android:id="@+id/checkInput_IMU"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="IMU, Compass, and Gyro indicator is good"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="GPS satellite count >8"
+                            android:textSize="18sp" />
+                        <EditText
+                            android:id="@+id/inputGPSsatellite"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginLeft="24dp"
+                            android:ems="10"
+                            android:textColor="@color/black"
+                            android:hint="in Number"
+                            android:textColorHint="#989898"
+                            android:inputType="number"
+                            android:minHeight="48dp" />
+                        <CheckedTextView
+                            android:id="@+id/checkInput_SetRTH"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Setting RTH altitude"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:gravity="center_vertical"
+                                android:minHeight="48dp"
+                                android:text="Take-off time"
+                                android:textSize="18sp" />
+
+                            <Space
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <TextView
+                                android:id="@+id/textTakeOffTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="8dp"
+                                android:textColor="@color/black"
+                                android:hint="00:00"
+                                android:textColorHint="#989898"
+                                android:textSize="16dp" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/buttonInputTakeOffTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAllCaps="false"
+                            android:text="Set Time"
+                            android:textSize="16dp"
+                            android:layout_gravity="center"/>
+                        <CheckedTextView
+                            android:id="@+id/checkInput_Countdown"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Count down before takeoff"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:text="Postflight Checklist"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="#DFDFDF"
+                app:cardCornerRadius="4dp"
+                app:contentPadding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textPostHeader1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Recovery"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutDetailPost1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:gravity="center_vertical"
+                                android:minHeight="48dp"
+                                android:text="Landing time"
+                                android:textSize="18sp" />
+
+                            <Space
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <TextView
+                                android:id="@+id/textLandingTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="8dp"
+                                android:textColor="@color/black"
+                                android:hint="00:00"
+                                android:textColorHint="#989898"
+                                android:textSize="16dp" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/buttonInputLandingTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAllCaps="false"
+                            android:text="Set Time"
+                            android:textSize="16dp"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Total flight time (min)"
+                            android:textSize="18sp" />
+                        <EditText
+                            android:id="@+id/inputTotalFlight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginLeft="24dp"
+                            android:ems="10"
+                            android:textColor="@color/black"
+                            android:hint="in Minutes"
+                            android:textColorHint="#989898"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:minHeight="48dp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Drone battery level (%)"
+                            android:textSize="18sp" />
+                        <EditText
+                            android:id="@+id/inputDroneBattPost"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginLeft="24dp"
+                            android:ems="10"
+                            android:textColor="@color/black"
+                            android:hint="in Percentage"
+                            android:textColorHint="#989898"
+                            android:inputType="number"
+                            android:minHeight="48dp" />
+                        <CheckedTextView
+                            android:id="@+id/checkInput_TurnOffRemote"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Turn off the remote control"
+                            android:textSize="18sp" />
+                        <CheckedTextView
+                            android:id="@+id/checkInput_TurnOffDrone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Turn off drone"
+                            android:textSize="18sp" />
+                        <CheckedTextView
+                            android:id="@+id/checkInput_DroneCondition"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Check all drone parts condition"
+                            android:textSize="18sp" />
+                        <CheckedTextView
+                            android:id="@+id/checkInput_Disassembly"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Disassembly"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="#DFDFDF"
+                app:cardCornerRadius="4dp"
+                app:contentPadding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textPostHeader2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Drone Data Check"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutDetailPost2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <CheckedTextView
+                            android:id="@+id/checkInput_CopyData"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Copy data from drone to storage"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Number of photos"
+                            android:textSize="18sp" />
+                        <EditText
+                            android:id="@+id/inputPhotos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginLeft="24dp"
+                            android:ems="10"
+                            android:textColor="@color/black"
+                            android:hint="in Number"
+                            android:textColorHint="#989898"
+                            android:inputType="number"
+                            android:minHeight="48dp" />
+                        <CheckedTextView
+                            android:id="@+id/checkInput_PhotoQLTY"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:text="Check photo quality"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_weight="1"
+        android:text="Save"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

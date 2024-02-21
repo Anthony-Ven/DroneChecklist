@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:background="@color/white"
+    tools:context=".AssessmentActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="#DFDFDF"
+                app:contentPadding="10dp"
+                app:cardCornerRadius="4dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/textSectionHeader1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Section 1: Job Details"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutDetailSect1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="16dp"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Date of flight"
+                                android:textColor="@color/black"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                            <Space
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <TextView
+                                android:id="@+id/textFlightDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="8dp"
+                                android:textColor="@color/black"
+                                android:hint="[Date]"
+                                android:textColorHint="#989898"
+                                android:textSize="16dp" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/buttonInputFlightDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAllCaps="false"
+                            android:text="Set Date"
+                            android:textSize="16dp"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Pilot in Command"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/inputPilotName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24dp"
+                            android:textColor="@color/black"
+                            android:ems="10"
+                            android:hint="Pilot name"
+                            android:textColorHint="#989898"
+                            android:inputType="textPersonName"
+                            android:minHeight="48dp"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Co-pilot / observer"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/inputCoPilotName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="24dp"
+                            android:ems="10"
+                            android:hint="Co-pilot / observer name"
+                            android:textColorHint="#989898"
+                            android:inputType="textPersonName"
+                            android:minHeight="48dp"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Project code"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/inputProjectCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="24dp"
+                            android:ems="10"
+                            android:hint="Project Code"
+                            android:textColorHint="#989898"
+                            android:inputType="textPersonName"
+                            android:minHeight="48dp"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mission"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/spinnerMission"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24dp"
+                            android:contentDescription="Mission selection"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:textSize="16dp" />
+
+                        <EditText
+                            android:id="@+id/inputMissionOther"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24dp"
+                            android:ems="10"
+                            android:hint="Other mission"
+                            android:textColorHint="#989898"
+                            android:inputType="textPersonName"
+                            android:textColor="@color/black"
+                            android:minHeight="48dp"
+                            android:textSize="16dp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="#DFDFDF"
+                app:contentPadding="10dp"
+                app:cardCornerRadius="4dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/textSectionHeader2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Section 2: Site Details"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutDetailSect2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="16dp"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Landowner"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/inputLandownerPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24dp"
+                            android:ems="10"
+                            android:hint="Landowner telephone"
+                            android:textColorHint="#989898"
+                            android:textColor="@color/black"
+                            android:inputType="phone"
+                            android:minHeight="48dp"
+                            android:textSize="16dp" />
+
+                        <EditText
+                            android:id="@+id/inputLandownerEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24dp"
+                            android:ems="10"
+                            android:hint="Landowner email"
+                            android:textColorHint="#989898"
+                            android:textColor="@color/black"
+                            android:inputType="textEmailAddress"
+                            android:minHeight="48dp"
+                            android:textSize="16dp" />
+
+                        <CheckedTextView
+                            android:id="@+id/checkPermissionAccess"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:minHeight="48dp"
+                            android:text="Permission Receive"
+                            android:textStyle="bold"
+                            android:textSize="16dp" />
+
+                        <CheckedTextView
+                            android:id="@+id/checkVehicleAccess"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:minHeight="48dp"
+                            android:text="Vehicle Access"
+                            android:textStyle="bold"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Medical facility nearby"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/inputMedicalFacility"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24dp"
+                            android:textColor="@color/black"
+                            android:ems="10"
+                            android:hint="Medical facility"
+                            android:textColorHint="#989898"
+                            android:inputType="textPersonName"
+                            android:minHeight="48dp"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Security facility nearby"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/inputSecurityFacility"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24dp"
+                            android:ems="10"
+                            android:textColor="@color/black"
+                            android:hint="Security facility"
+                            android:textColorHint="#989898"
+                            android:inputType="textPersonName"
+                            android:minHeight="48dp"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Site address"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/inputAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24dp"
+                            android:ems="10"
+                            android:textColor="@color/black"
+                            android:hint="Address"
+                            android:textColorHint="#989898"
+                            android:inputType="textPersonName"
+                            android:minHeight="48dp"
+                            android:textSize="16dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/textLatitude"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="24dp"
+                                android:layout_weight="1"
+                                android:textColor="@color/black"
+                                android:gravity="center"
+                                android:hint="Latitude"
+                                android:textColorHint="#989898"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text=":"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:id="@+id/textLongitude"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:hint="Longitude"
+                                android:textColorHint="#989898"
+                                android:textSize="16dp" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/buttonInputCoordinate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAllCaps="false"
+                            android:text="Set Coordinate"
+                            android:textSize="16dp"
+                            android:textColor="@color/black"
+                            android:visibility="gone"
+                            android:layout_gravity="center"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="#DFDFDF"
+                app:contentPadding="10dp"
+                app:cardCornerRadius="4dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/textSectionHeader3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Section 3: Ground Assessment"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutDetailSect3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="16dp"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Risk item(s)"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <CheckedTextView
+                            android:id="@+id/checkRisk1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24dp"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:text="Cables"
+                            android:textSize="16dp" />
+
+                        <CheckedTextView
+                            android:id="@+id/checkRisk2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24dp"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:text="Chimneys and poles"
+                            android:textSize="16dp" />
+
+                        <CheckedTextView
+                            android:id="@+id/checkRisk3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24dp"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:text="Crowd"
+                            android:textSize="16dp" />
+
+                        <CheckedTextView
+                            android:id="@+id/checkRisk4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24dp"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:text="Antenna and radio interference"
+                            android:textSize="16dp" />
+
+                        <CheckedTextView
+                            android:id="@+id/checkRisk5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24dp"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:text="Roads / Rights of Way"
+                            android:textSize="16dp" />
+
+                        <CheckedTextView
+                            android:id="@+id/checkRisk6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24dp"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:text="Airspace traffics"
+                            android:textSize="16dp" />
+
+                        <CheckedTextView
+                            android:id="@+id/checkRisk7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24dp"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:text="Livestock / Wildlife"
+                            android:textSize="16dp" />
+
+                        <CheckedTextView
+                            android:id="@+id/checkRisk8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24dp"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:checked="false"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            android:minHeight="48dp"
+                            android:text="Buildings / structures / vegetation"
+                            android:textSize="16dp" />
+
+                        <EditText
+                            android:id="@+id/inputRiskOther"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="24dp"
+                            android:ems="10"
+                            android:hint="Other risk"
+                            android:textColorHint="#989898"
+                            android:inputType="textPersonName"
+                            android:minHeight="48dp"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mitigations"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/inputMitigations"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24dp"
+                            android:textColor="@color/black"
+                            android:ems="10"
+                            android:hint="Mitigations"
+                            android:textColorHint="#989898"
+                            android:inputType="textPersonName"
+                            android:minHeight="48dp"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="#DFDFDF"
+                app:contentPadding="10dp"
+                app:cardCornerRadius="4dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/textSectionHeader4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Section 4: Weather Forecast"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutDetailSect4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="16dp"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Wind speed (km/h)"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/inputWindSpeed"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24dp"
+                            android:ems="10"
+                            android:hint="Wind speed"
+                            android:textColorHint="#989898"
+                            android:textColor="@color/black"
+                            android:inputType="number"
+                            android:minHeight="48dp"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Wind direction"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/inputWindDirect"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24dp"
+                            android:ems="10"
+                            android:textColor="@color/black"
+                            android:hint="Wind direction"
+                            android:textColorHint="#989898"
+                            android:inputType="textPersonName"
+                            android:minHeight="48dp"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="General forecast"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/inputGeneralForecast"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24dp"
+                            android:ems="10"
+                            android:textColor="@color/black"
+                            android:hint="Forecast"
+                            android:textColorHint="#989898"
+                            android:inputType="textPersonName"
+                            android:minHeight="48dp"
+                            android:textSize="16dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sunrise time"
+                                android:textColor="@color/black"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                            <Space
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <TextView
+                                android:id="@+id/textSunriseTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:layout_marginRight="8dp"
+                                android:hint="00:00"
+                                android:textColorHint="#989898"
+                                android:textSize="16dp" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/buttonInputSunriseTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAllCaps="false"
+                            android:text="Set Time"
+                            android:textSize="16dp"
+                            android:layout_gravity="center"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sunset time"
+                                android:textColor="@color/black"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                            <Space
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <TextView
+                                android:id="@+id/textSunsetTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="8dp"
+                                android:textColor="@color/black"
+                                android:hint="00:00"
+                                android:textColorHint="#989898"
+                                android:textSize="16dp" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/buttonInputSunsetTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAllCaps="false"
+                            android:text="Set Time"
+                            android:textSize="16dp"
+                            android:layout_gravity="center"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="#DFDFDF"
+                app:contentPadding="10dp"
+                app:cardCornerRadius="4dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/textSectionHeader5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Section 5: Notes and Comments"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutDetailSect5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="16dp"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/inputNotes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:textColor="@color/black"
+                            android:hint="Notes and Comments"
+                            android:textColorHint="#989898"
+                            android:inputType="textMultiLine"
+                            android:minHeight="48dp"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_weight="1"
+        android:text="Save"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

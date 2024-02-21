@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DroneChecklist</string>
+    <string-array name="mission_items">
+        <item>Mapping</item>
+        <item>Monitoring</item>
+        <item>Inspection</item>
+        <item>Training</item>
+        <item>Other</item>
+    </string-array>
+</resources>
